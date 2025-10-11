@@ -1,0 +1,79 @@
+[
+  {
+    "nombre": "River Plate",
+    "dt": "Marcelo Gallardo",
+    "estadio": "Monumental",
+    "titulosNacionales": 38,
+    "titulosInternacionales": 12
+  }, 
+  {
+    "nombre": "Boca Juniors",
+    "dt": "Claudio Ubeda",
+    "estadio": "La Bombonera",
+    "titulosNacionales": 35,
+    "titulosInternacionales": 18
+  },
+  {
+    "nombre": "Racing Club",
+    "dt": "Gustavo Costas",
+    "estadio": "Presidente Perón (El Cilindro)",
+    "titulosNacionales": 18,
+    "titulosInternacionales": 6
+  },
+  {
+    "nombre": "Independiente",
+    "dt": "Gustavo Quinteros",
+    "estadio": "Libertadores de América – Ricardo Enrique Bochini",
+    "titulosNacionales": 16,
+    "titulosInternacionales": 18
+  },
+  {
+    "nombre": "San Lorenzo",
+    "dt": "Damian Ayude",
+    "estadio": "Pedro Bidegain (Nuevo Gasómetro)",
+    "titulosNacionales": 15,
+    "titulosInternacionales": 2
+  },
+  {
+    "nombre": "Estudiantes de La Plata",
+    "dt": "Eduardo Domínguez",
+    "estadio": "Jorge Luis Hirschi (UNO)",
+    "titulosNacionales": 6,
+    "titulosInternacionales": 6
+  },
+  {
+    "nombre": "Vélez Sarsfield",
+    "dt": "Guillermo Barros Schelotto",
+    "estadio": "José Amalfitani",
+    "titulosNacionales": 10,
+    "titulosInternacionales": 5
+  },
+  {
+    "nombre": "Newell’s Old Boys",
+    "dt": "Cristian Fabbiani",
+    "estadio": "Marcelo Bielsa",
+    "titulosNacionales": 6,
+    "titulosInternacionales": 0
+  },
+  {
+    "nombre": "Rosario Central",
+    "dt": "MAriel Holan",
+    "estadio": "Gigante de Arroyito",
+    "titulosNacionales": 5,
+    "titulosInternacionales": 0
+  },
+  {
+    "nombre": "Argentinos Juniors",
+    "dt": "Nicolás Diez",
+    "estadio": "Diego Armando Maradona",
+    "titulosNacionales": 3,
+    "titulosInternacionales": 1
+  },
+  {
+    "nombre": "Huracán",
+    "dt": "Frank Darío Kudelka",
+    "estadio": "Tomás Adolfo Ducó",
+    "titulosNacionales": 5,
+    "titulosInternacionales": 1
+  }
+]
