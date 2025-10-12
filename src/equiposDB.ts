@@ -1,0 +1,90 @@
+const equiposDB = [
+  {
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    nombre: "River Plate",
+    dt: "Marcelo Gallardo",
+    estadio: "Monumental",
+    titulosNacionales: 38,
+    titulosInternacionales: 12
+  },
+  {
+    id: "9b2f3e6a-8d4e-4a3f-9a2b-5f1a4e5d9c11",
+    nombre: "Boca Juniors",
+    dt: "Claudio Ubeda",
+    estadio: "La Bombonera",
+    titulosNacionales: 35,
+    titulosInternacionales: 18
+  },
+  {
+    id: "c9a64635-4b1c-4ef0-9c65-2a7b5f0c72aa",
+    nombre: "Racing Club",
+    dt: "Gustavo Costas",
+    estadio: "Presidente Perón (El Cilindro)",
+    titulosNacionales: 18,
+    titulosInternacionales: 6
+  },
+  {
+    id: "1a0be7c2-97a4-4f79-aef3-2b94f0e711b3",
+    nombre: "Independiente",
+    dt: "Gustavo Quinteros",
+    estadio: "Libertadores de América – Ricardo Enrique Bochini",
+    titulosNacionales: 16,
+    titulosInternacionales: 18
+  },
+  {
+    id: "54d77c1d-6c5f-4fd3-8e0e-f36b72f129c1",
+    nombre: "San Lorenzo",
+    dt: "Damian Ayude",
+    estadio: "Pedro Bidegain (Nuevo Gasómetro)",
+    titulosNacionales: 15,
+    titulosInternacionales: 2
+  },
+  {
+    id: "3bdbf6a4-4693-43a7-9ad3-1028b1c6e21b",
+    nombre: "Estudiantes de La Plata",
+    dt: "Eduardo Domínguez",
+    estadio: "Jorge Luis Hirschi (UNO)",
+    titulosNacionales: 6,
+    titulosInternacionales: 6
+  },
+  {
+    id: "adf671f5-72de-42e4-8b62-bf674b7c1a88",
+    nombre: "Vélez Sarsfield",
+    dt: "Guillermo Barros Schelotto",
+    estadio: "José Amalfitani",
+    titulosNacionales: 10,
+    titulosInternacionales: 5
+  },
+  {
+    id: "b81e2601-33a2-4dc1-b37b-4cfb6bcb4e92",
+    nombre: "Newell’s Old Boys",
+    dt: "Cristian Fabbiani",
+    estadio: "Marcelo Bielsa",
+    titulosNacionales: 6,
+    titulosInternacionales: 0
+  },
+  {
+    id: "e13d8d54-6f4d-45e8-8d9f-c69b43718a02",
+    nombre: "Rosario Central",
+    dt: "Ariel Holan",
+    estadio: "Gigante de Arroyito",
+    titulosNacionales: 5,
+    titulosInternacionales: 0
+  },
+  {
+    id: "8b3a42d4-ecf2-46a0-8d86-03a9c2b84f7b",
+    nombre: "Argentinos Juniors",
+    dt: "Nicolás Diez",
+    estadio: "Diego Armando Maradona",
+    titulosNacionales: 3,
+    titulosInternacionales: 1
+  },
+  {
+    id: "d1e5e23c-2cf7-4979-a13c-b9f5cbde1d4a",
+    nombre: "Huracán",
+    dt: "Frank Darío Kudelka",
+    estadio: "Tomás Adolfo Ducó",
+    titulosNacionales: 5,
+    titulosInternacionales: 1
+  }
+]

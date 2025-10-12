@@ -13,11 +13,10 @@ const main = (argumentos: any[], accion: string, equipos: any[]) => {
       console.log(equipos)
       break;
     case "buscarEquipo":
-      if (!argumentos[3]) {
+      if (!argumentos[2]) {
         console.log("Debe ingresar el nombre que desea buscar")
         break
-      }
-  
+      } 
       const equipoEncontrado = encontrarEquipo(equipos, argumentos[3])
       
       if (!equipoEncontrado) {
@@ -27,15 +26,15 @@ const main = (argumentos: any[], accion: string, equipos: any[]) => {
         console.log(equipoEncontrado)
       }
       break;
-    /* case "borrarEquipo":
-      const nombre = argumentos[3]
+    case "borrarEquipo":
+      const nombreDel = argumentos[3]
 
-      if (!nombre) {
+      if (!nombreDel) {
         console.log("Debes ingresar un nombre valido para borrarlo de la base de datos")
         break
       }
 
-      const indice = equipos.findIndex((equipo: any) => equipo.nombre === nombre)
+      const indice = equipos.findIndex((equipo: any) => equipo.nombre === nombreDel)
 
       if (indice === -1) {
         console.log("El equipo no se encuentra en nuestra base de datos")
@@ -45,16 +44,16 @@ const main = (argumentos: any[], accion: string, equipos: any[]) => {
       const equipoBorrado = equipos.splice(indice, 1)
       
       writeDB(equipos)
-      console.log(equipoBorrado[0])
+      console.log("El equipo que ha sido eliminado en nuestra base de datos es:\n", equipoBorrado[0])
       break;
     case "agregarEquipo":
-      const nombre = argumentos[3]
+      const inputNombre = argumentos[3]
       const inputdt = argumentos[4]
       const inputEstadio = argumentos[5]
       const inputTitulosNacionales = argumentos[6]
       const inputTitulosInternacionales = argumentos[7]
 
-      if (!nombre || !inputdt || !inputEstadio || !inputTitulosNacionales || !inputTitulosInternacionales) {
+      if (!inputNombre || !inputdt || !inputEstadio || !inputTitulosNacionales || !inputTitulosInternacionales) {
         console.log("Debes ingresar los datos requeridos de nombre, dt, estadio, titulos nacionales e internacionales")
         break
 
@@ -69,7 +68,7 @@ const main = (argumentos: any[], accion: string, equipos: any[]) => {
 
       const nuevoEquipo = {
         id: crypto.randomUUID(),
-        nombre: nombre,
+        nombre: inputNombre,
         dt: inputdt,
         estadio: inputEstadio,
         titulosNacionales: inputTitulosNacionales,
@@ -81,30 +80,29 @@ const main = (argumentos: any[], accion: string, equipos: any[]) => {
 
       console.log(equipos, "<--- Base de datos de equipos Actualizada")
       break;
-    case "actualizarEquipo": */
-      const nombreEquipo = argumentos[3]
-      const nombredt = argumentos[4]
-      const estadio = argumentos[5]
-      const titulosNacionales = argumentos[6]
-      const titulosInternacionales = argumentos[7]
+    case "actualizarEquipo":
+      const nombreEquipoUpd = argumentos[3]
+      const nombredtUpd = argumentos[4]
+      const estadioUpd = argumentos[5]
+      const titulosNacionalesUpd = argumentos[6]
+      const titulosInternacionalesUpd = argumentos[7]
       
-      if (!nombredt || !estadio || !titulosNacionales || !titulosInternacionales) {
+      if (!nombreEquipoUpd || !nombredtUpd || !estadioUpd || !titulosNacionalesUpd || !titulosInternacionalesUpd) {
         console.log("Debes ingresar los datos requeridos")
         break
       }
 
-      const equipoAActualizar = encontrarEquipo(equipos, nombreEquipo)
+      const equipoAActualizar = encontrarEquipo(equipos, nombreEquipoUpd)
 
       if (!equipoAActualizar) {
         console.log("El equipo no existe en nuestra base de datos")
         break
       }
 
-     
-      equipoAActualizar.dt = nombredt
-      equipoAActualizar.estadio = estadio
-      equipoAActualizar.titulosNacionales = titulosNacionales
-      equipoAActualizar.titulosInternacionales = titulosInternacionales
+      equipoAActualizar.dt = nombredtUpd
+      equipoAActualizar.estadio = estadioUpd
+      equipoAActualizar.titulosNacionales = titulosNacionalesUpd
+      equipoAActualizar.titulosInternacionales = titulosInternacionalesUpd
       writeDB(equipos)
 
       console.log(equipoAActualizar)
