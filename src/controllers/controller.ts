@@ -5,7 +5,7 @@ import { commands } from "../utils/commands"
 
 const main = (argumentos: any[], accion: string, equipos: any[]) => {
   switch (accion) {
-    case "Info":
+    case "info":
       console.log("---- Comandos Válidos ----")
       console.table(commands)
       break;
