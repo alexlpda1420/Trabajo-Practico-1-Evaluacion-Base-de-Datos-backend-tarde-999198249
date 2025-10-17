@@ -1,5 +1,9 @@
+import { Equipo, IEquipo } from "../equiposDB"; 
 
-const encontrarEquipo = (equipos: any[], nombre: string) => equipos.find((equipo) =>
-  equipo.nombre.toLowerCase() === nombre.toLowerCase())
+export async function buscarPorId(id: string): Promise<IEquipo | null> {
+  return await Equipo.findOne({ id }).exec();
+}
 
-export { encontrarEquipo }
+export async function buscarPorNombre(nombre: string): Promise<IEquipo | null> {
+  return await Equipo.findOne({ nombre }).exec();
+}

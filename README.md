@@ -36,11 +36,8 @@ Cada estudiante deberá:
 
 ## 📋 Descripción del Proyecto
 
-Este proyecto consiste en la implementación de un **CRUD (Create, Read, Update, Delete)** para gestionar equipos de fútbol argentino que fue desarrollado en **TypeScript**
-
-El sistema funciona completamente **desde la consola**, permitiendo crear, listar, buscar, actualizar y eliminar equipos de manera interactiva.  
-
-El proyecto forma parte del trabajo práctico de la **Diplomatura en Desarrollo Web Backend**
+Este proyecto implementa un **CRUD (Create, Read, Update, Delete)** para gestionar equipos de fútbol argentino, desarrollado en **TypeScript** utilizando **Mongoose** y **MongoDB**.  
+El sistema funciona completamente desde la **consola**, sin API ni interfaz web, cumpliendo con el objetivo del trabajo práctico de la **Diplomatura en Desarrollo Web Backend**.
 
 ---
 ## 🧱 Estructura del Proyecto
@@ -57,9 +54,10 @@ El proyecto forma parte del trabajo práctico de la **Diplomatura en Desarrollo 
 │   ├── 📁 utils
 │   │   ├── 📄 buscarEquipo.ts
 │   │   ├── 📄 commands.ts
-│   │   ├── 📄 equiposDB.ts
-│   │   ├── 📄 index.ts
-│   │   └── 📄 listaEquipos.json
+│   ├── 📄 equiposDB.ts
+│   ├── 📄 index.ts
+│   └── 📄 listaEquipos.json
+├── 📄 .env
 ├── 📄 .gitignore
 ├── 📄 package-lock.json
 ├── 📄 package.json
@@ -70,8 +68,12 @@ El proyecto forma parte del trabajo práctico de la **Diplomatura en Desarrollo 
 ## ⚙️ Tecnologías Utilizadas
 
 - 🟦 **TypeScript**
+- 🍃 **MongoDB**
+- 🧩 **Mongoose**
+- ⚙️ **Dotenv**
 - 🧠 **Node.js**
 - 🚀 **TS-Node-Dev**
+
 
 ---
 ## 🧰 Instalación y Configuración
@@ -85,7 +87,36 @@ cd Trabajo-Practico-1-Evaluacion-Base-de-Datos-backend-tarde-999198249
 ### 2️⃣ Instalar dependencias
 ```bash
 npm install 
+npm install mongoose dotenv
+npm install -D @types/node
+
 ```
+---
+## 🔧 Configurar la conexión a MongoDB
+
+En la raíz del proyecto, creá un archivo .env con la siguiente línea:
+
+```env
+
+MONGO_URI=mongodb://localhost:27017/bd
+
+```
+## 🍃 Cargar los Datos Iniciales
+
+El proyecto incluye un archivo listaEquipos.json con los equipos más importantes del fútbol argentino.
+Podés cargarlo en tu base de datos de esta manera:
+
+1. Abrí MongoDB Compass.
+2. Conectate a tu base local o Atlas (mongodb://localhost:27017/bd).
+3. En el panel izquierdo, seleccioná tu base de datos bd.
+4. Si no existe, creala con el botón "Create Database".
+5. Dentro de la base, creá la colección equipos.
+6. Hacé clic en “Add Data” → “Import File”.
+7. Seleccioná el archivo src/listaEquipos.json.
+8. En formato de importación, elegí JSON y presioná Import ✅
+9. ¡Listo! Tus equipos aparecerán automáticamente en la base.
+
+
 ## 🧠 Uso del CRUD
 
 Ejecutá los siguientes comandos desde la terminal:
@@ -97,20 +128,27 @@ npm run dev info
 > ![Info](/src/images/Menu-Info.png)
 - **Crear un Equipo**
 ```bash
-npm run dev agregarEquipo "Chacarita Juniors" "Juan Manuel Azconzabal" "Estadio Club Atletico Chacarita Juniors" "1" "0"
-```
+npm run dev crear nombre="River Plate" dt="Marcelo Gallardo" estadio="Monumental" titulosNacionales=38 titulosInternacionales=12
 
-- **Buscar un Equipo**
-```bash
-npm run dev buscarEquipo "River Plate"
 ```
-- **Borrar un Equipo**
+- **Listar todos los equipos**
 ```bash
-npm run dev borrarEquipo "Chacarita Juniors"
+npm run dev listar
+
+```
+- **Obtener un equipo por su ID (UUID)**
+```bash
+npm run dev obtener <id>
+```
+- **Eliminar un equipo**
+```bash
+npm run dev eliminar <id>
+
 ```
 - **Actualizar un Equipo**
 ```bash
-npm run dev actualizarEquipo "Chacarita Juniors" "Alexis Roldan" "Estadio Chacarita Juniors" "20" "20"
+npm run dev actualizar <id> campo=valor [campo=valor...]
+
 ```
 ---
 ## 🧾 Ejemplo de Documento Guardado
@@ -121,8 +159,8 @@ npm run dev actualizarEquipo "Chacarita Juniors" "Alexis Roldan" "Estadio Chacar
     "nombre": "River Plate",
     "dt": "Marcelo Gallardo",
     "estadio": "Monumental",
-    "titulosNacionales": "38",
-    "titulosInternacionales": "12"
+    "titulosNacionales": 38,
+    "titulosInternacionales": 12
   }
 ```
 ## Autor

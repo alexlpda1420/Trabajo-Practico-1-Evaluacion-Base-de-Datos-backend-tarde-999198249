@@ -1,8 +1,9 @@
-import { readDB } from "./db/connection";
-import { main } from "./controllers/controller";
+import { conectarDB } from "./db/connection";
+import { ejecutarComando } from "./utils/commands";
 
-const argumentos = process.argv
-const accion = argumentos[2]
-const equipos = readDB()
+async function main() {
+  await conectarDB();
+  await ejecutarComando();
+}
 
-main(argumentos, accion, equipos)
+main();

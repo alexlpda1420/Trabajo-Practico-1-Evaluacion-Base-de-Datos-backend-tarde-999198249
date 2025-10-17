@@ -1,9 +1,15 @@
-import fs from "node:fs"
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const DB_PATH = "./src/listaEquipos.json" 
+dotenv.config();
 
-const readDB = () => JSON.parse(fs.readFileSync(DB_PATH, "utf-8"))
-
-const writeDB = (equipos: any) => fs.writeFileSync(DB_PATH, JSON.stringify(equipos))
-
-export { readDB, writeDB }
+export const conectarDB = async () => {
+  try {
+    const uri = process.env.MONGO_URI || "mongodb://localhost:27017/bd";
+    await mongoose.connect(uri);
+    console.log("✅ Conectado correctamente a MongoDB");
+  } catch (error) {
+    console.error("❌ Error de conexión a MongoDB:", error);
+    process.exit(1);
+  }
+};
